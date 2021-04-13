@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 5</title>
+</head>
+<body>
+<script>
+    // let f = prompt('nhap so luong');
+    // let a = 0;
+    // let b = 1;
+    //
+    // for (let i = 0; i < f; i++) {
+    //     sum = a; // sum =0;1;1
+    //     a = a + b; // a = 1;1;2
+    //     b = sum; // b = 0;1;1
+    //     // t = sum + a - 1;
+    //     document.write(sum +'<br>') //0,1,1
+    // }
+    // // document.write('tong cua' + f + 'so trong day fibonacci la :' + t )
+    // ;
+    // f++;
+
+    // let n = +prompt("So luong");
+    function getListFibo(n) {
+        let a = 0;
+        let b = 1;
+        let fibonacci = [a,b];
+
+        while (fibonacci.length < n){
+            let next = a + b;
+            a = b;
+            b = next;
+            fibonacci.push(next);
+        }
+        return fibonacci;
+    }
+
+
+    function sumOfFibonacci(fiboArray) {
+        let sum = 0;
+        for (let i = 0; i < fiboArray.length; i++) {
+            sum+=fiboArray[i];
+        }
+        document.write("Tong: "+sum);
+    }
+
+    function dislayFibonacci(fibo) {
+        for (let i = 0; i < fibo.length; i++) {
+            document.write(fibo[i]+',');
+        }
+    }
+
+    dislayFibonacci(getListFibo(20));
+    sumOfFibonacci(getListFibo(20));
+</script>
+</body>
+</html>

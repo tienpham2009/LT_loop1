@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 3</title>
+</head>
+<body>
+<script>
+    let f = prompt('nhap so luong');
+    let a = 0;
+    let b = 1;
+    for (i = 0; i < f; i++) {
+        sum = a;
+        a = a + b;
+        b = sum;
+        document.write(sum +',');
+    }
+    f++;
+</script>
+</body>
+</html>
